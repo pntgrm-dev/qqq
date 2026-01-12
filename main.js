@@ -1,13 +1,14 @@
 import "dotenv/config";
 
-const option = {
-    url: process.env.API_URL,
-    key: process.env.KEY,
-    method: "GET",
-    json: true
-}
-
 export const fetchArticles = async () => {
+    
+    const option = {
+      url: process.env.API_URL,
+      key: process.env.KEY,
+      method: "GET",
+      json: true,
+    };
+
     try {
         const response = await fetch(option.url);
         if (!response.ok) {
